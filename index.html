@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <h1 class="sr-only">Stats preview card component</h1>
+
     <div class="card">
       <div class="content">
-        <h2 class="title">Get insights that help your business grow.</h2>
+        <h2 class="title">Get <span>insights</span> that help your business grow.</h2>
 
         <p class="description">
           Discover the benefits of data analytics and make better 
@@ -22,12 +28,24 @@
         </p>
 
         <ul class="info">
-          <li>10k+ companies</li>
-          <li>314 templates</li>
-          <li>12m+ queries</li>
+          <li>
+            <strong>10k+</strong>
+            <span>companies</span>
+          </li>
+          <li>
+            <strong>314</strong>
+            <span>templates</span>
+          </li>
+          <li>
+            <strong>12M+</strong>
+            <span>queries</span>
+          </li>
         </ul>
       </div>
-      <img src="./images/image-header-desktop.jpg" alt="" aria-hidden="true">
+      
+      <div class="image-wrap">
+        <img src="./images/image-header-desktop.jpg" alt="" aria-hidden="true">
+      </div>
     </div>
   </main>
 </body>
