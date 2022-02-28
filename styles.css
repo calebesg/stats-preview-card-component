@@ -21,17 +21,26 @@ body {
   font-size: 0.9375rem;
   background-color: var(--very-dark-blue);
   min-height: 100vh;
+}
+
+/* Main ======================================== */
+main {
+  min-height: 100vh;
+  padding: 1.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .sr-only {
   height: 0;
+  width: 0;
   opacity: 0;
 }
 
-/* card ======================================== */
+/* Card ========================================= */
+
 .card {
   display: flex;
   background-color: var(--dark-desaturated-blue);
@@ -40,8 +49,7 @@ body {
 }
 
 .content {
-  max-width: 35.625rem;
-  width: 100%;
+  width: 35.625rem;
   padding: 4.375rem 4.375rem 0;
 }
 
@@ -62,7 +70,7 @@ body {
   line-height: 1.5rem;
 }
 
-.info {
+.stats {
   list-style: none;
   margin-top: 2rem;
   padding-right: 3rem;
@@ -71,18 +79,18 @@ body {
   justify-content: space-between;
 }
 
-.info li {
+.stats li {
   display: flex;
   flex-direction: column;
 }
 
-.info li strong {
+.stats li strong {
   color: var(--white);
   font-size: 1.375rem;
   font-weight: 700;
 }
 
-.info li span {
+.stats li span {
   color: var(--slightly-60);
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -94,6 +102,10 @@ body {
   display: flex;
 }
 
+.image-wrap img {
+  width: 100%;
+}
+
 .image-wrap::after {
   content: "";
   position: absolute;
@@ -103,4 +115,49 @@ body {
   right: 0;
   mix-blend-mode: multiply;
   background: var(--soft-violet);
+}
+
+.image-wrap .mobile {
+  display: none;
+}
+
+/* Using media rule for screen less 1120px =============== */
+
+@media only screen and (max-width: 70rem) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+    padding: 2.125rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    padding: 1.25rem 0;
+  }
+
+  .stats {
+    flex-direction: column;
+    margin-top: 1.75rem;
+    padding: 0;
+  }
+
+  .stats li + li {
+    margin-top: 2.125rem;
+  }
+
+  .image-wrap .desktop {
+    display: none;
+  }
+
+  .image-wrap .mobile {
+    display: block;
+    background-size: auto;
+  }
 }
